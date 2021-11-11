@@ -1,0 +1,44 @@
+package br.com.avp.apirest.modelo;
+
+
+
+public class Regiao {
+
+	private Long id;
+	private String nomeRegiao;
+	private int populacao;
+	private Double area;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNomeRegiao() {
+		return nomeRegiao;
+	}
+
+	public void setNomeRegiao(String nomeRegiao) {
+		this.nomeRegiao = nomeRegiao;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
+	}
+
+	public Double getArea() {
+		return area;
+	}
+
+	public void setArea(Double area) {
+		this.area = area;
+	}
+
+}

@@ -1,0 +1,100 @@
+package br.com.avp.apirest.config.validacao;
+
+
+import br.com.avp.apirest.modelo.Regiao;
+
+public class RegiaoValidacao {
+
+	private String regiao;
+
+	Regiao re = new Regiao();
+		
+	public String getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(String regiao) {
+		regiao = re.getNome();
+		regiao.toLowerCase();
+		regiao.replaceAll(" ", "");
+		try {
+			if (regiao == "norte") {
+				regiao = "Norte";
+			} else if (regiao == "nordeste") {
+				regiao = "Nordeste";
+			} else if (regiao == "sul") {
+				regiao = "Sul";
+			} else if (regiao == "sudeste") {
+				regiao = "Sudeste";
+			} else if (regiao == "centro-oeste") {
+				regiao = "Centro-Oeste";
+			}
+		} catch (Exception e) {
+			System.out.println("Inválido" + e.getMessage());
+		}
+		this.regiao = regiao;
+	}
+	
+	
+//	regiao = re.getNome();
+//	regiao.toLowerCase();
+//	regiao.replaceAll(" ", "");
+//	try {
+//		if (regiao == "matogrosso") {
+//			regiao = "Mato Grosso";
+//		} else if (regiao == "minasgerais") {
+//			regiao = "Minas Gerais";
+//		} else if (regiao == "bahia") {
+//			regiao = "Bahia";
+//		} else if (regiao == "riodejaneiro") {
+//			regiao = "Rio de Janeiro";
+//		} else if (regiao == "paraná") {
+//			regiao = "Paraná";
+//		} else if (regiao == "goiás") {
+//			regiao = "Goiás";
+//		} else if (regiao == "sãopaulo") {
+//			regiao = "São Paulo";
+//		} else if (regiao == "riograndedosul") {
+//			regiao = "Rio Grande do Sul";
+//		} else if (regiao == "ceará") {
+//			regiao = "Ceará";
+//		} else if (regiao == "santacatarina") {
+//			regiao = "Santa Catarina";
+//		} else if (regiao == "pernambuco") {
+//			regiao = "Pernambuco";
+//		} else if (regiao == "pará") {
+//			regiao = "Pará";
+//		} else if (regiao == "amazonas") {
+//			regiao = "Amazonas";
+//		} else if (regiao == "espiritosanto") {
+//			regiao = "Espirito Santo";
+//		} else if (regiao == "sergipe") {
+//			regiao = "Sergipe";
+//		} else if (regiao == "maranhão") {
+//			regiao = "Maranhão";
+//		} else if (regiao == "piauí") {
+//			regiao = "Piauí";
+//		} else if (regiao == "riograndedonorte") {
+//			regiao = "Rio Grande do Norte";
+//		} else if (regiao == "amapá") {
+//			regiao = "Amapá";
+//		} else if (regiao == "alagoas") {
+//			regiao = "Alagoas";
+//		} else if (regiao == "roraima") {
+//			regiao = "Roraima";
+//		} else if (regiao == "matogrossodosul") {
+//			regiao = "Mato Grosso do Sul";
+//		} else if (regiao == "acre") {
+//			regiao = "Acre";
+//		} else if (regiao == "rondônia") {
+//			regiao = "Rondônia";
+//		} else if (regiao == "tocantins") {
+//			regiao = "Tocantins";
+//
+//		}
+//	} catch (Exception e) {
+//		System.out.println("Inválido" + e.getMessage());
+//	}
+
+	
+}

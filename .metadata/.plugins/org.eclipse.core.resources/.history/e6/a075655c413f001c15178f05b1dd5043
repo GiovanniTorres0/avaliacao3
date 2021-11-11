@@ -1,0 +1,14 @@
+package br.com.avp.apirest.form;
+
+import java.util.ArrayList;
+
+public class AllStates {
+
+	String estados[] = { "Mato Grosso", "Minas Gerais", "Bahia", "Rio de Janeiro", "Paraná", "Goiás", "São Paulo",
+			"Rio Grande do Sul", "Ceará", "Santa Catarina", "Pernambuco", "Pará", "Amazonas", "Espirito Santo",
+			"Sergipe", "Maranhão", "Piauí", "Rio Grande do Norte", "Amapá", "Alagoas", "Roraima", "Mato Grosso do Sul",
+			"Acre", "Rondônia", "Tocantins" };
+
+	String regioes[] = { "Norte", "Sul", "Nordeste", "Sudeste", "Centro-Oeste" };
+
+}

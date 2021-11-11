@@ -1,0 +1,25 @@
+package br.com.avp.apirest.config.validacao;
+
+
+import br.com.avp.apirest.modelo.Regiao;
+
+public class RegiaoValidacao {
+
+	private Regiao regiao;
+
+	Regiao re = new Regiao();
+		
+	public Regiao getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(Regiao regiao) {
+		
+		this.regiao = regiao;
+	}
+	
+	
+
+
+	
+}

@@ -1,0 +1,57 @@
+package br.com.avp.apirest.form;
+
+import br.com.avp.apirest.dto.EstadoDto;
+import br.com.avp.apirest.modelo.Estado;
+import br.com.avp.apirest.modelo.Regiao;
+import br.com.avp.apirest.repository.EstadoRepository;
+import br.com.avp.apirest.repository.RegiaoRepository;
+
+public class EstadoFormAtualizar {
+
+	private String nome;
+	private String regiao;
+	public int populacao;
+	public double area;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getNomeRegiao() {
+		return regiao;
+	}
+
+	public void setNomeRegiao(String nomeRegiao) {
+		this.regiao = nomeRegiao;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
+	}
+
+	public double getArea() {
+		return area;
+	}
+
+	public void setArea(double area) {
+		this.area = area;
+	}
+
+	public Estado atualizar(Long id, EstadoRepository estadoRepository) {
+		Estado estado = estadoRepository.getOne(id);
+		estado.setNome(this.nome);
+		estado.setRegiao(this.regiao);
+		return estado;
+	}
+
+
+	}
+}

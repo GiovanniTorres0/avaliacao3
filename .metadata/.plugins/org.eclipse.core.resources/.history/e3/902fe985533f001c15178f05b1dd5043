@@ -1,0 +1,12 @@
+package br.com.avp.apirest.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.avp.apirest.modelo.Regiao;
+
+public interface RegiaoRepository extends JpaRepository<Regiao, Long> {
+
+
+	Regiao findByNome(String nome);
+
+	
+}

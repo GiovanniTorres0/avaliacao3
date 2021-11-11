@@ -1,0 +1,23 @@
+package br.com.avp.apirest.dto;
+
+import br.com.avp.apirest.modelo.Estado;
+
+public class PopulacaoDto {
+
+	
+	private int populacao;
+	private String nome;
+	public int getPopulacao() {
+		return populacao;
+	}
+	public String getNome() {
+		return nome;
+	}
+	
+	public PopulacaoDto(Estado estado) {
+		this.nome = estado.getNome();
+		this.populacao = estado.getPopulacao();
+	
+	}
+	
+}

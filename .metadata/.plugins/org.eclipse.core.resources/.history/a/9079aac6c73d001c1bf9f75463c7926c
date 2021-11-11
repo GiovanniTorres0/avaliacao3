@@ -1,0 +1,2 @@
+INSERT INTO ESTADO(nome) VALUES ('Rio grande do Sul');
+INSERT INTO REGIAO(nomeRegiao, populacao, area) VALUES ('Sul', 100000, 200.00);

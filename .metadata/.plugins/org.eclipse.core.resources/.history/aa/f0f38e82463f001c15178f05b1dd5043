@@ -1,0 +1,70 @@
+package br.com.avp.apirest.form;
+
+import org.springframework.web.bind.MethodArgumentNotValidException;
+
+import br.com.avp.apirest.config.validacao.ErroDeValidacaoHandler;
+
+public class AllStates {
+
+	private MethodArgumentNotValidException exception;
+	ErroDeValidacaoHandler ev = new ErroDeValidacaoHandler();
+
+	String nomeRegiao;
+	
+	
+	String estados[] = { "Mato Grosso", "Minas Gerais", "Bahia", "Rio de Janeiro", "Paraná", "Goiás", "São Paulo",
+			"Rio Grande do Sul", "Ceará", "Santa Catarina", "Pernambuco", "Pará", "Amazonas", "Espirito Santo",
+			"Sergipe", "Maranhão", "Piauí", "Rio Grande do Norte", "Amapá", "Alagoas", "Roraima", "Mato Grosso do Sul",
+			"Acre", "Rondônia", "Tocantins" };
+
+	String Regioes[] = { "Norte", "Sul", "Nordeste", "Sudeste", "Centro-Oeste", "norte", "sul", "nordeste", "sudeste", "centro-oeste" };
+
+	
+	public void teste(String nomeRegiao) {
+	switch (nomeRegiao) {
+	case ("Sul"):
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("Norte"):
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("Sudeste"):
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("Nordeste"):
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("Centro-Oeste"):
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("sul"):
+		nomeRegiao = "Sul";
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("norte"):
+		nomeRegiao = "Norte";
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("nordeste"):
+		nomeRegiao = "Nordeste";
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("sudeste"):
+		nomeRegiao = "Sudeste";
+		this.nomeRegiao = nomeRegiao;
+		break;
+	case ("centro-oeste"):
+		nomeRegiao = "Centro-Oeste";
+		this.nomeRegiao = nomeRegiao;
+		break;
+	default:
+		ev.handle(exception);
+		break;
+	}
+		
+}
+
+
+	public MethodArgumentNotValidException getException() {
+		return exception;
+	}}

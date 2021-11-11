@@ -1,0 +1,26 @@
+package br.com.avp.apirest.services;
+
+
+
+import br.com.avp.apirest.repository.*;
+
+public class TopicoService {
+	private EstadoRepository estadoRepository;
+	private RegiaoRepository regiaoRepository;
+	
+	
+	
+	
+	public EstadoRepository getEstadoRepository() {
+			return estadoRepository;
+		}
+		public RegiaoRepository getRegiaoRepository() {
+			return regiaoRepository;
+		}
+
+	
+
+
+	
+	
+}

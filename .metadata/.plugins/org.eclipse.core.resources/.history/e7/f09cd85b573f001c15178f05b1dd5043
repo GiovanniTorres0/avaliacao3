@@ -1,0 +1,71 @@
+package br.com.avp.apirest.form;
+
+import br.com.avp.apirest.config.validacao.ErroDeValidacaoHandler;
+import br.com.avp.apirest.modelo.Estado;
+import br.com.avp.apirest.repository.EstadoRepository;
+
+public class EstadoFormAtualizar extends EstadoForm {
+
+	private String nome;
+	private String regiao;
+	private int populacao;
+	private double area;
+	ErroDeValidacaoHandler ev = new ErroDeValidacaoHandler();
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(String regiao) {
+		switch (regiao) {
+		case ("Sul"):
+			break;
+		case ("Norte"):
+			break;
+		case ("Sudeste"):
+			break;
+		case ("Nordeste"):
+			break;
+		case ("Centro-Oeste"):
+			break;
+		case ("sul"):
+			regiao = "Sul";
+			break;
+		case ("norte"):
+			regiao = "Norte";
+			break;
+		case ("nordeste"):
+			regiao = "Nordeste";
+			break;
+		case ("sudeste"):
+			regiao = "Sudeste";
+			break;
+		case ("centro-oeste"):
+			regiao = "Centro-Oeste";
+			break;
+		default:
+			ev.handle(exception);
+			break;
+		}
+		this.regiao = regiao;
+
+	}
+
+	public Estado atualizar(Long id, EstadoRepository estadoRepository) {
+		Estado estado = estadoRepository.getOne(id);
+		estado.setNome(this.nome);
+		estado.setRegiao(this.regiao);
+		estado.setArea(this.area);
+		estado.setPopulacao(this.populacao);
+		return estado;
+	}
+
+}

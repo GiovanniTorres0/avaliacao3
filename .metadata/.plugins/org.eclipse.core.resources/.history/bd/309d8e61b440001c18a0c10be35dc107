@@ -1,0 +1,36 @@
+package br.com.avp.apirest.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import br.com.avp.apirest.modelo.Estado;
+
+public class PopulacaoDto {
+
+	private String nome;
+	private int populacao;
+
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+
+	public PopulacaoDto(Estado estado) {
+		this.nome = estado.getNome();
+		this.populacao = estado.getPopulacao();
+
+	}
+
+	public static List<PopulacaoDto> converter(List<Estado> estados) {
+		return estados.stream().map(PopulacaoDto::new).collect(Collectors.toList());
+	
+}
+}

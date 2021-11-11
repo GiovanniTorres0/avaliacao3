@@ -1,0 +1,77 @@
+package br.com.avp.apirest.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import br.com.avp.apirest.modelo.Estado;
+import br.com.avp.apirest.modelo.Regiao;
+
+
+
+
+public class EstadoDto {
+
+	
+	
+	private Long id;
+	private String nome;
+	private int populacao;
+	private Double area;
+	private Regiao regiao;
+	
+	
+	
+	
+	public EstadoDto(Estado estado) {
+		this.id = estado.getId();
+		this.nome = estado.getNome();
+		this.populacao = estado.getPopulacao();
+		this.area = estado.getArea();
+		this.regiao = estado.getRegiao();
+	}
+
+	
+	
+
+	public Regiao getRegiao() {
+		
+		nome.replaceAll(" ", "");
+		try {
+		if (nome == "sul") {
+			nome = "Sul";
+		} else if (nome == "norte") {
+			nome = "Norte";
+		} else if (nome == "nordeste") {
+			nome = "Nordeste";
+		} else if (nome == "sudeste") {
+			nome = "Sudeste";
+		} else if (nome == "centro-oeste") {
+			nome = "Centro-Oeste";
+		} } catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		return regiao;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public Double getArea() {
+		return area;
+	}
+
+	public static List<EstadoDto> converter(List<Estado> estados) {
+		return estados.stream().map(EstadoDto::new).collect(Collectors.toList());
+	}
+
+}

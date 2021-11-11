@@ -1,0 +1,5 @@
+package br.com.avp.apirest.form;
+
+public class AllStates {
+
+}

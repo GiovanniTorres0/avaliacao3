@@ -1,0 +1,57 @@
+package br.com.avp.apirest.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import br.com.avp.apirest.modelo.Estado;
+import br.com.avp.apirest.modelo.Regiao;
+import br.com.avp.apirest.repository.RegiaoRepository;
+
+public class EstadoDto {
+
+	private Long id;
+	private String nome;
+	private String populacao;
+	private String area;
+	private String regiao;
+
+	public EstadoDto(Estado estado) {
+		this.id = estado.getId();
+		this.nome = estado.getNome();
+		this.populacao = estado.getPopulacao();
+		this.area = estado.getArea();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public String getRegiao() {
+		return regiao;
+	}
+
+	public void setRegiao(String regiao) {
+		this.regiao = regiao;
+	}
+
+	public String getPopulacao() {
+		return populacao;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public static List<EstadoDto> converter(List<Estado> estados) {
+		return estados.stream().map(EstadoDto::new).collect(Collectors.toList());
+	}
+
+
+	}
+
+

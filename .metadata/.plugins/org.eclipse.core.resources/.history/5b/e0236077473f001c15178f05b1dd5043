@@ -1,0 +1,99 @@
+package br.com.avp.apirest.form;
+
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.Length;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+
+import br.com.avp.apirest.config.validacao.ErroDeValidacaoHandler;
+import br.com.avp.apirest.modelo.Estado;
+import br.com.avp.apirest.modelo.Regiao;
+import br.com.avp.apirest.repository.RegiaoRepository;
+
+public class EstadoForm {
+
+	@NotNull
+	@NotEmpty
+	private String nome;
+	@NotNull
+	@NotEmpty
+	@Length(max = 12)
+	private String nomeRegiao;
+	@NotNull
+	private int populacao;
+	@NotNull
+	private Double area;
+	private MethodArgumentNotValidException exception;
+	ErroDeValidacaoHandler ev = new ErroDeValidacaoHandler();
+
+	AllStates as = new AllStates();
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+
+		this.nome = nome;
+	}
+
+	public String getNomeRegiao() {
+		return nomeRegiao;
+	}
+
+	public void setNomeRegiao(String nomeRegiao) {
+		switch (nomeRegiao) {
+		case ("Sul"):
+			break;
+		case ("Norte"):
+			break;
+		case ("Sudeste"):
+			break;
+		case ("Nordeste"):
+			break;
+		case ("Centro-Oeste"):
+			break;
+		case ("sul"):
+			nomeRegiao = "Sul";
+			break;
+		case ("norte"):
+			nomeRegiao = "Norte";
+			break;
+		case ("nordeste"):
+			nomeRegiao = "Nordeste";
+			break;
+		case ("sudeste"):
+			nomeRegiao = "Sudeste";
+			break;
+		case ("centro-oeste"):
+			nomeRegiao = "Centro-Oeste";
+			break;
+		default:
+			ev.handle(exception);
+			break;
+		}
+		this.nomeRegiao = nomeRegiao;
+	}
+
+	public void setPopulacao(int populacao) {
+		this.populacao = populacao;
+	}
+
+	public void setArea(Double area) {
+		this.area = area;
+	}
+
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public Double getArea() {
+		return area;
+	}
+
+	public Estado converter(RegiaoRepository regiaoRepository) {
+		Regiao regiao = regiaoRepository.findByNome(nomeRegiao);
+		return new Estado(nome, populacao, area, regiao);
+	}
+
+}

@@ -1,0 +1,49 @@
+package br.com.avp.apirest.modelo;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Regiao {
+
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String nome;
+	private String populacao;
+	private String area;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getRegiao() {
+		return nome;
+	}
+
+	public void setRegiao(String regiao) {
+		this.nome = regiao;
+	}
+
+	public String getPopulacao() {
+		return populacao;
+	}
+
+	public void setPopulacao(String populacao) {
+		this.populacao = populacao;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public void setArea(String area) {
+		this.area = area;
+	}
+
+}

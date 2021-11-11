@@ -1,0 +1,26 @@
+package br.com.avp.apirest;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
+
+public class Config {
+
+	@Bean
+	public CorsFilter corsFilter() {
+	    UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+
+	    // Allow anyone and anything access. Probably ok for Swagger spec
+	    CorsConfiguration config = new CorsConfiguration();
+	    config.setAllowCredentials(true);
+	    config.addAllowedOrigin("*");
+	    config.addAllowedHeader("*");
+	    config.addAllowedMethod("*");
+
+	    source.registerCorsConfiguration("/api/states", config);
+	    return new CorsFilter(source);
+	}
+	
+	
+}

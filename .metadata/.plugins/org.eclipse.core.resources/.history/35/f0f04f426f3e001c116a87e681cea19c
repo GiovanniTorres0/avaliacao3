@@ -1,0 +1,30 @@
+package br.com.avp.apirest.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+
+import br.com.avp.apirest.repository.*;
+
+public class TopicoService {
+
+	@Autowired
+	private EstadoRepository estadoRepository;
+	
+	@Autowired
+	private RegiaoRepository regiaoRepository;
+
+		
+	
+	public EstadoRepository getEstadoRepository() {
+		return estadoRepository;
+	}
+
+	public RegiaoRepository getRegiaoRepository() {
+		return regiaoRepository;
+	}
+
+
+	
+	
+	
+}

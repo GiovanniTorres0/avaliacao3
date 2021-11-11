@@ -1,0 +1,116 @@
+package br.com.avp.apirest.form;
+
+public class AllStates extends EstadoForm {
+
+//LowerCase não esta funcionando, então tive que improvisar, mas sei que no caso do lowercase seria menos codigo e menos trabalho.	
+
+	public void String(String estado) {
+		switch (estado) {
+		case "Mato Grosso":
+			break;
+		case "Minas Gerais":
+			break;
+		case "Bahia":
+			break;
+		case "Rio de Janeiro":
+			break;
+		case "Paraná":
+			break;
+		case "Goiás":
+			break;
+		case "São Paulo":
+			break;
+		case "Rio Grande do Sul":
+			break;
+		case "Ceará":
+			break;
+		case "Santa Catarina":
+			break;
+		case "Pernambuco":
+			break;
+		case "Pará":
+			break;
+		case "Amazonas":
+			break;
+		case "Espirito Santo":
+			break;
+		case "Sergipe":
+			break;
+		case "Maranhão":
+			break;
+		case "Piauí":
+			break;
+		case "Rio Grande do Norte":
+			break;
+		case "Amapá":
+			break;
+		case "Alagoas":
+			break;
+		case "Roraima":
+			break;
+		case "Mato Grosso do Sul":
+			break;
+		case "Acre":
+			break;
+		case "Rondônia":
+			break;
+		case "Tocantins":
+			break;
+		case "mato mrosso":
+			break;
+		case "minas merais":
+			break;
+		case "bahia":
+			break;
+		case "rio de janeiro":
+			break;
+		case "paraná":
+			break;
+		case "goiás":
+			break;
+		case "são paulo":
+			break;
+		case "rio grande do sul":
+			break;
+		case "ceará":
+			break;
+		case "santa catarina":
+			break;
+		case "pernambuco":
+			break;
+		case "pará":
+			break;
+		case "amazonas":
+			break;
+		case "espirito santo":
+			break;
+		case "sergipe":
+			break;
+		case "maranhão":
+			break;
+		case "piauí":
+			break;
+		case "rio grande do norte":
+			break;
+		case "amapá":
+			break;
+		case "alagoas":
+			break;
+		case "roraima":
+			break;
+		case "mato grosso do sul":
+			break;
+		case "acre":
+			break;
+		case "rondônia":
+			break;
+		case "tocantins":
+			break;
+
+		default:
+			ev.handle(exception);
+			
+		}
+
+	}
+}

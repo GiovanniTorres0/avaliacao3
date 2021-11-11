@@ -1,0 +1,141 @@
+package br.com.avp.apirest.form;
+
+public class AllStates extends EstadoForm {
+
+//LowerCase não esta funcionando, então tive que improvisar, mas sei que no caso do lowercase seria menos codigo e menos trabalho.	
+
+	public String Teste(String nome) {
+		switch (nome) {
+		case "Mato Grosso":
+			break;
+		case "Minas Gerais":
+			break;
+		case "Bahia":
+			break;
+		case "Rio de Janeiro":
+			break;
+		case "Paraná":
+			break;
+		case "Goiás":
+			break;
+		case "São Paulo":
+			break;
+		case "Rio Grande do Sul":
+			break;
+		case "Ceará":
+			break;
+		case "Santa Catarina":
+			break;
+		case "Pernambuco":
+			break;
+		case "Pará":
+			break;
+		case "Amazonas":
+			break;
+		case "Espirito Santo":
+			break;
+		case "Sergipe":
+			break;
+		case "Maranhão":
+			break;
+		case "Piauí":
+			break;
+		case "Rio Grande do Norte":
+			break;
+		case "Amapá":
+			break;
+		case "Alagoas":
+			break;
+		case "Roraima":
+			break;
+		case "Mato Grosso do Sul":
+			break;
+		case "Acre":
+			break;
+		case "Rondônia":
+			break;
+		case "Tocantins":
+			break;
+		case "mato grosso":
+			nome = "Mato Grosso";
+			break;
+		case "minas gerais":
+			nome = "Minas Gerais";
+			break;
+		case "bahia":
+			nome = "Bahia";
+			break;
+		case "rio de janeiro":
+			nome = "Rio de Janeiro";
+			break;
+		case "paraná":
+			nome = "Paraná";
+			break;
+		case "goiás":
+			nome = "Goiás";
+			break;
+		case "são paulo":
+			nome = "São Paulo";
+			break;
+		case "rio grande do sul":
+			nome = "Rio Grande do Sul";
+			break;
+		case "ceará":
+			nome = "Ceará";
+			break;
+		case "santa catarina":
+			nome = "Santa Catarina";
+			break;
+		case "pernambuco":
+			nome = "Pernambuco";
+			break;
+		case "pará":
+			nome = "Pará";
+			break;
+		case "amazonas":
+			nome = "Amazonas";
+			break;
+		case "espirito santo":
+			nome = "Espirito Santo";
+			break;
+		case "sergipe":
+			nome = "Sergipe";
+			break;
+		case "maranhão":
+			nome = "Maranhão";
+			break;
+		case "piauí":
+			nome = "Piauí";
+			break;
+		case "rio grande do norte":
+			nome = "Rio Grande do Norte";
+			break;
+		case "amapá":
+			nome = "Amapá";
+			break;
+		case "alagoas":
+			nome = "Alagoas";
+			break;
+		case "roraima":
+			nome = "Roraima";
+			break;
+		case "mato grosso do sul":
+			nome = "Mato Grosso do Sul";
+			break;
+		case "acre":
+			nome = "Acre";
+			break;
+		case "rondônia":
+			nome = "Rondônia";
+			break;
+		case "tocantins":
+			nome = "Tocantins";
+			break;
+
+		default:
+			ev.handle(exception);
+			break;
+		}
+		return nome;
+	}
+}

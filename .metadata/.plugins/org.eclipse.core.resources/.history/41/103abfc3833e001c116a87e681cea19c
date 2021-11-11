@@ -1,0 +1,46 @@
+package br.com.avp.apirest.dto;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
+import br.com.avp.apirest.modelo.Estado;
+
+
+public class EstadoDto {
+
+	private Long id;
+	private String nome;
+	private int populacao;
+	private BigDecimal area;
+
+	public EstadoDto(Estado estado) {
+		this.id = estado.getId();
+		this.nome = estado.getNome();
+		this.populacao = estado.getPopulacao();
+		this.area = (BigDecimal) estado.getArea();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	
+	public int getPopulacao() {
+		return populacao;
+	}
+
+	public BigDecimal getArea() {
+		return area;
+	}
+
+	public static List<EstadoDto> converter(List<Estado> estados) {
+		return estados.stream().map(EstadoDto::new).collect(Collectors.toList());
+	}
+
+	
+}
+	

@@ -1,0 +1,12 @@
+INSERT INTO REGIAO(nome) VALUES('Sul');
+INSERT INTO REGIAO(nome) VALUES('Nordeste');
+INSERT INTO REGIAO(nome) VALUES('Sudeste');
+INSERT INTO REGIAO(nome) VALUES('Norte');
+INSERT INTO REGIAO(nome) VALUES('Centro-Oeste');
+
+
+INSERT INTO ESTADO(nome, populacao, area, regiao_id) VALUES('Rio grande do sul', '11290000', '281.748', 1);
+INSERT INTO ESTADO(nome, populacao, area, regiao_id) VALUES('Bahia', '15130000', '567.295', 2);
+INSERT INTO ESTADO(nome, populacao, area, regiao_id) VALUES('Minas Gerais', '20870000', '586.528', 3);
+
+

@@ -1,0 +1,14 @@
+package br.com.avp.apirest.form;
+
+
+public class AllStates {
+
+	String estados[] = { "Mato Grosso", "Minas Gerais", "Bahia", "Rio de Janeiro", "Paraná", "Goiás", "São Paulo",
+			"Rio Grande do Sul", "Ceará", "Santa Catarina", "Pernambuco", "Pará", "Amazonas", "Espirito Santo",
+			"Sergipe", "Maranhão", "Piauí", "Rio Grande do Norte", "Amapá", "Alagoas", "Roraima", "Mato Grosso do Sul",
+			"Acre", "Rondônia", "Tocantins" };
+
+	String Regioes[] = { "Norte", "Sul", "Nordeste", "Sudeste", "Centro-Oeste", "norte", "sul", "nordeste", "sudeste", "centro-oeste" };
+
+
+}

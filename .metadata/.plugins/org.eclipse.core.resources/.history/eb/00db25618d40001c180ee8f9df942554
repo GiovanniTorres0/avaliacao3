@@ -1,0 +1,32 @@
+package br.com.avp.apirest.dto;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import br.com.avp.apirest.modelo.Estado;
+
+public class RegiaoDto {
+
+	private String nome;
+	private String regiao;
+
+	public RegiaoDto(Estado estado) {
+
+		this.nome = estado.getNome();
+		;
+		this.regiao = estado.getRegiao();
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getRegiao() {
+		return regiao;
+	}
+
+	public static List<RegiaoDto> converterRegiao(List<Estado> estados) {
+		return estados.stream().map(RegiaoDto::new).collect(Collectors.toList());
+
+	}
+}
